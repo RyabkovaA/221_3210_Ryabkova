@@ -21,13 +21,18 @@ public:
 private slots:
     void on_pushButton_clicked();
 
-    void on_buttonClear_clicked();
+    void handleCardButtonClick();
 
-    void updateScore(int number);
+    void resetGame();
+
+    void showScoreMessage();
+
 
 private:
     Ui::MainWindow *ui;
-    int m_score;
     card *m_cards[9];
+    card *m_currentCard = nullptr;
+    int m_score = 0;
+    int m_visibleCount = 0;
 };
 #endif // MAINWINDOW_H

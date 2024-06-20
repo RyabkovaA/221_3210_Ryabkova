@@ -5,12 +5,15 @@
 card::card(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::card)
-    , m_number(0)
 {
     ui->setupUi(this);
-    // int m_number = QRandomGenerator::global()->bounded(-1000, 1000);
+
+    generateNumber();
+
+    // connect(ui->buttonShow, &QPushButton::clicked, this, &card::on_buttonShow_clicked);
+    // m_number = QRandomGenerator::global()->bounded(-10, 10);
     // ui->labelNumber->setText(QString::number(m_number));
-    connect(ui->buttonShow, &QPushButton::clicked, this, &card::on_buttonShow_clicked);
+    // ui->labelNumber->setHidden(true);
 
 }
 
@@ -19,10 +22,31 @@ card::~card()
     delete ui;
 }
 
+
 void card::on_buttonShow_clicked()
 {
-    int m_number = QRandomGenerator::global()->bounded(-1000, 1000);
-    ui->labelNumber->setText(QString::number(m_number));
-    emit numberGenerated(m_number);
+    emit cardButtonClicked();
 }
 
+
+void card::showValue()
+{
+    ui->labelNumber->setText(QString::number(m_number));
+    ui->labelNumber->setHidden(false);
+}
+
+void card::hideNumber()
+{
+    ui->labelNumber->setHidden(true);
+}
+
+int card::cardValue() const
+{
+    return m_number;
+}
+
+
+void card::generateNumber()
+{
+    m_number = QRandomGenerator::global()->bounded(-10, 10);
+}

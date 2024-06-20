@@ -15,8 +15,13 @@ public:
     explicit card(QWidget *parent = nullptr);
     ~card();
 
+    void showValue();
+    void hideNumber();
+    int cardValue() const;
+    void generateNumber();
+
 signals:
-    void numberGenerated(int number);
+    void cardButtonClicked();
 
 private slots:
     void on_buttonShow_clicked();

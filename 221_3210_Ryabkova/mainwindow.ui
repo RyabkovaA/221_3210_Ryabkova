@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>520</width>
-    <height>538</height>
+    <width>624</width>
+    <height>689</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -24,8 +24,8 @@
        <widget class="QLabel" name="label_2">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>10</y>
+          <x>70</x>
+          <y>60</y>
           <width>63</width>
           <height>20</height>
          </rect>
@@ -37,8 +37,8 @@
        <widget class="QLabel" name="labelScore">
         <property name="geometry">
          <rect>
-          <x>60</x>
-          <y>10</y>
+          <x>140</x>
+          <y>60</y>
           <width>63</width>
           <height>20</height>
          </rect>
@@ -50,8 +50,8 @@
        <widget class="QPushButton" name="buttonClear">
         <property name="geometry">
          <rect>
-          <x>0</x>
-          <y>410</y>
+          <x>260</x>
+          <y>470</y>
           <width>83</width>
           <height>29</height>
          </rect>
@@ -63,10 +63,10 @@
        <widget class="QWidget" name="gridLayoutWidget">
         <property name="geometry">
          <rect>
-          <x>0</x>
-          <y>40</y>
-          <width>491</width>
-          <height>361</height>
+          <x>70</x>
+          <y>90</y>
+          <width>461</width>
+          <height>371</height>
          </rect>
         </property>
         <layout class="QGridLayout" name="gridLayout_3"/>
@@ -168,7 +168,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>520</width>
+     <width>624</width>
      <height>25</height>
     </rect>
    </property>
