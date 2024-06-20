@@ -25,7 +25,7 @@ private slots:
 
     void resetGame();
 
-    void showScoreMessage();
+    void endGameMessage();
 
 
 private:

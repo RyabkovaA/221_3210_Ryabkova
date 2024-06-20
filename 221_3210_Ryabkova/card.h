@@ -2,6 +2,7 @@
 #define CARD_H
 
 #include <QWidget>
+#include <QByteArray>
 
 namespace Ui {
 class card;
@@ -28,6 +29,11 @@ private slots:
 
 private:
     Ui::card *ui;
+    QByteArray encrypt(const QByteArray &data);
+    QByteArray decrypt(const QByteArray &encryptedData);
+
+    QByteArray m_encryptedNumber;
+
     int m_number;
 };
 

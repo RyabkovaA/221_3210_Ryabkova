@@ -32,6 +32,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_clicked()
 {
     if (ui->EditPin->text() == "1234") {
+
             ui->stackedWidget->setCurrentIndex(0);
             ui->EditPin->clear();
 
@@ -45,8 +46,6 @@ void MainWindow::on_pushButton_clicked()
 void MainWindow::handleCardButtonClick()
 {
     card *clickedCard = qobject_cast<card*>(sender());
-    if (!clickedCard)
-        return;
 
     for (int i = 0; i < 9; ++i) {
         if (m_cards[i] == clickedCard) {
@@ -62,7 +61,7 @@ void MainWindow::handleCardButtonClick()
     ui->labelScore->setText(QString::number(m_score));
 
     if (m_visibleCount == 3) {
-        showScoreMessage();
+        endGameMessage();
     }
 }
 
@@ -78,7 +77,7 @@ void MainWindow::resetGame()
     m_visibleCount = 0;
 }
 
-void MainWindow::showScoreMessage()
+void MainWindow::endGameMessage()
 {
     QString info_message = "Набранная сумма: " + QString::number(m_score);
     QMessageBox::information(this, "Результат", info_message);
