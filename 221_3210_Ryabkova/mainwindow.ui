@@ -21,15 +21,55 @@
        <number>1</number>
       </property>
       <widget class="QWidget" name="page">
-       <widget class="QListWidget" name="listWidget">
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>63</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Очки:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelScore">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>10</y>
+          <width>63</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="buttonClear">
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>0</y>
-          <width>491</width>
-          <height>461</height>
+          <y>410</y>
+          <width>83</width>
+          <height>29</height>
          </rect>
         </property>
+        <property name="text">
+         <string>Сброс</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="gridLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>40</y>
+          <width>491</width>
+          <height>361</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_3"/>
        </widget>
       </widget>
       <widget class="QWidget" name="page_2">
